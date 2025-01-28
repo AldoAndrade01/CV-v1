@@ -1,0 +1,173 @@
+/* Crear una variable CSS personalizada */
+:root {
+  --primary-color: #6b47dc;
+  --secondary-color: #f4f4f4;
+}
+
+/* Importar una fuente de Google */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif; /* Usar la fuente importada */
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #1d1d1d; /* Color de texto general */
+}
+
+/* Herencia de estilos: Los <p> dentro de .profile heredan estilos */
+.profile p {
+  color: #272727;
+  font-size: 16px; /* Cambiar el tamaño de fuente explícitamente */
+  line-height: 1.2; /* Aumenta la altura de línea para mayor separación */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 0 4px 8px var(--primary-color);
+  border: 1px solid #ddd; /* Agregar borde al contenedor */
+}
+
+.header {
+  background-color: var(--primary-color); /* Usar variable CSS */
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main {
+  display: flex;
+  gap: 20px; /* Espacio entre los elementos */
+  align-items: flex-start; /* Alinea verticalmente los elementos al inicio */
+  padding: 20px;
+  height: auto; /* Ajusta la altura automáticamente según el contenido */
+}
+
+.profile {
+  flex: 1; /* Ocupa solo el espacio necesario */
+  max-width: 300px; /* Limita el ancho máximo de la sección izquierda */
+  background-color: var(--secondary-color); /* Fondo claro */
+  border: 1px solid #ddd; /* Borde alrededor del perfil */
+  text-align: center;
+  padding: 20px;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  width: 170px;
+  height: 170px;
+  margin-bottom: 10px;
+  border: 3px solid var(--primary-color); /* Borde para la imagen */
+}
+
+.profile h1 {
+  margin: 0; /* Sin margen adicional */
+  color: #272727;
+  font-size: 23px;
+}
+
+.container .profile .role {
+  padding: 15px 0px;
+  color: var(--primary-color);
+  font-weight: bold;
+  font-size: 30px; /* Aumentar el tamaño del texto */
+}
+
+.Data{
+  color : #6b47dc;
+  font-size: 20px;
+}
+
+.social-links a {
+  margin: 0 5px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.experience {
+  flex: 3; /* Ocupa el espacio restante del contenedor principal */
+  background-color: var(--secondary-color); /* Fondo blanco */
+  padding: 20px; /* Margen interno */
+  border: 1px solid #ddd; /* Borde alrededor */
+  box-sizing: border-box; /* Asegura que el padding se incluya en el tamaño total */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.experience h2 {
+  color: var(--primary-color); /* Color del título */
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.job {
+  margin-bottom: 20px; /* Espaciado entre trabajos */
+  padding-bottom: 10px; /* Espaciado interno */
+  border-bottom: 1px solid #ddd; /* Línea divisoria entre trabajos */
+}
+
+.job h3 {
+  margin: 0; /* Sin margen adicional */
+  color: #333;
+}
+
+.job p {
+  margin: 5px 0; /* Espaciado entre párrafos */
+}
+
+ul {
+  padding-left: 20px; /* Sangría para las viñetas */
+}
+
+.download-btn {
+  background-color: white;
+  color: var(--primary-color);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 2px solid var(--primary-color); /* Agregar borde al botón */
+}
+
+.social-icon {
+  width: 40px; /* Ajusta el tamaño de las imágenes */
+  height: 40px;
+  margin: 0px 10px; /* Espacio entre las imágenes */
+}
+
+.social-icon2 {
+  width: 20px; /* Ajusta el tamaño de las imágenes */
+  height: 20px;
+  margin: -2px 10px; /* Espacio entre las imágenes */
+}
+
+.skills {
+  display: flex;
+  gap: 10px; /* Espacio entre las habilidades */
+  justify-content: space-around; /* Distribuye el espacio uniformemente entre los elementos */
+  padding: 10px;
+  text-align: center;
+}
+
+.skill {
+  flex: 1; /* Asegura que cada habilidad ocupe el mismo espacio */
+  min-width: 150px; /* Establece un ancho mínimo para cada habilidad */
+  text-align: center;
+}
+
+.skill ul {
+  list-style-position: inside; /* Alinea las viñetas con el texto */
+  padding: 30; /* Elimina el relleno predeterminado */
+  margin: 10; /* Elimina el margen predeterminado */
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.skill li {
+  margin-top: 10px; /* Espaciado entre elementos de la lista */
+  margin-left: 20px; /* Ajusta el margen izquierdo para alinear las viñetas con el texto */
+}
