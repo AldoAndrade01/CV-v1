@@ -64,6 +64,13 @@ body {
   height: 170px;
   margin-bottom: 10px;
   border: 3px solid var(--primary-color); /* Borde para la imagen */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadir transición */
+}
+
+/* Animación al pasar el cursor sobre la foto de perfil */
+.profile-picture:hover {
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño */
+  box-shadow: 0 0 15px rgba(107, 71, 220, 0.7); /* Añade un resplandor */
 }
 
 .profile h1 {
@@ -132,12 +139,24 @@ ul {
   border-radius: 20px;
   font-weight: bold;
   border: 2px solid var(--primary-color); /* Agregar borde al botón */
+  transition: transform 0.2s ease; /* Añadir transición */
+}
+
+/* Animación al pasar el cursor sobre el botón de descarga */
+.download-btn:hover {
+  transform: translateY(-5px); /* Mueve el botón hacia arriba */
 }
 
 .social-icon {
   width: 40px; /* Ajusta el tamaño de las imágenes */
   height: 40px;
   margin: 0px 10px; /* Espacio entre las imágenes */
+  transition: transform 0.2s ease; /* Añadir transición */
+}
+
+/* Animación al pasar el cursor sobre los iconos de redes sociales */
+.social-icon:hover {
+  transform: translateY(-5px); /* Mueve el icono hacia arriba */
 }
 
 .social-icon2 {
