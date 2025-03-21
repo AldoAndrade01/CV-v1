@@ -33,12 +33,29 @@ body {
 }
 
 .header {
-  background-color: var(--primary-color); /* Usar variable CSS */
+  background-color: var(--primary-color);
   color: white;
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* Distribute space between items */
   align-items: center;
+}
+
+.header h1 {
+  flex-grow: 1; /* Allow the title to take up available space */
+  text-align: center; /* Center the title text */
+  margin: 0; /* Remove default margin */
+}
+
+.photo {
+  background-color: var(--secondary-color);
+  border: 5px solid var(--primary-color); /* Ensure the purple border is visible */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Increase shadow size and intensity */
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin: 10px; /* Add margin around the photo container */
 }
 
 .main {
@@ -131,20 +148,21 @@ ul {
   padding-left: 20px; /* Sangría para las viñetas */
 }
 
-.download-btn {
+.navigation-btn {
   background-color: white;
   color: var(--primary-color);
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 20px;
   font-weight: bold;
-  border: 2px solid var(--primary-color); /* Agregar borde al botón */
-  transition: transform 0.2s ease; /* Añadir transición */
+  border: 2px solid var(--primary-color);
+  transition: transform 0.2s ease;
+  margin-left: auto; /* Aligns the button to the right */
 }
 
-/* Animación al pasar el cursor sobre el botón de descarga */
-.download-btn:hover {
-  transform: translateY(-5px); /* Mueve el botón hacia arriba */
+/* Animación al pasar el cursor sobre el botón */
+.navigation-btn:hover {
+  transform: translateY(-5px);
 }
 
 .social-icon {
@@ -189,4 +207,59 @@ ul {
 .skill li {
   margin-top: 10px; /* Espaciado entre elementos de la lista */
   margin-left: 20px; /* Ajusta el margen izquierdo para alinear las viñetas con el texto */
+}
+
+.gallery-photo {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo:hover .gallery-photo {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(107, 71, 220, 0.7);
+}
+
+.photo {
+  text-align: center;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.photo {
+  background-color: var(--secondary-color);
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(107, 71, 220, 0.7);
+}
+
+.gallery-photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.photo h3 {
+  margin: 10px 0;
+  color: var(--primary-color);
+}
+
+.photo p {
+  padding: 0 10px 10px;
+  color: #333;
 }
